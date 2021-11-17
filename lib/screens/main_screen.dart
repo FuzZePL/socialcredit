@@ -25,7 +25,7 @@ class _MainScreenState extends State<MainScreen> {
         body: Stack(
           children: [
             Image.asset(
-              'assets/lo8.jpg',
+              'assets/LO8_backgrouns.png',
               height: size.height,
               width: size.width,
             ),
