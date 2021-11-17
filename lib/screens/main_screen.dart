@@ -45,7 +45,14 @@ class _MainScreenState extends State<MainScreen> {
                     ),
                   ),
                 ),
-                Image.asset('assets/avatar.png'),
+                SizedBox(
+                  height: margin * 2,
+                ),
+                Image.asset(
+                  'assets/avatar.png',
+                  height: size.height * 0.2,
+                  width: size.width * 0.2,
+                ),
                 SizedBox(
                   height: margin * 2.5,
                 ),
@@ -97,12 +104,36 @@ class _MainScreenState extends State<MainScreen> {
       );
     } else {
       return Scaffold(
+        backgroundColor: Colors.grey[300],
         body: Container(
           height: size.height,
           width: size.width,
           alignment: Alignment.center,
-          child: Text(
-            points.toString(),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                'assets/avatar.png',
+                height: size.height * 0.5,
+                width: size.width * 0.5,
+              ),
+              SizedBox(
+                height: margin,
+              ),
+              Text(
+                'Grotulacje zdobyłeś całe: ',
+                style: TextStyle(
+                  fontSize: 32,
+                ),
+              ),
+              Text(
+                '${points.toString()} punktów',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 34,
+                ),
+              ),
+            ],
           ),
         ),
       );
