@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class AnswerQue extends StatelessWidget {
   final VoidCallback onTap;
   final String answer;
+
   const AnswerQue({
     Key? key,
     required this.onTap,
@@ -21,6 +22,7 @@ class AnswerQue extends StatelessWidget {
           right: 16,
         ),
         decoration: BoxDecoration(
+          color: Colors.white,
           borderRadius: BorderRadius.circular(14),
           border: Border.all(
             color: Colors.black,
