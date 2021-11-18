@@ -1,3 +1,4 @@
+import 'package:first_flutter_app/screens/image_screen.dart';
 import 'package:first_flutter_app/screens/main_screen.dart';
 import 'package:first_flutter_app/screens/start_screen.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       ),
       home: StartScreen(),
       routes: {
+        ImageScreen.routeName: (ctx) => const ImageScreen(),
         MainScreen.routename: (ctx) => const MainScreen(),
       },
     );

@@ -1,3 +1,4 @@
+import 'package:first_flutter_app/screens/image_screen.dart';
 import 'package:first_flutter_app/screens/main_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -7,6 +8,7 @@ class StartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+
     return Scaffold(
       body: Stack(
         children: [
@@ -23,6 +25,7 @@ class StartScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
+                  padding: EdgeInsets.all(8),
                   decoration: BoxDecoration(
                     color: Colors.black,
                     borderRadius: BorderRadius.circular(16),
@@ -47,7 +50,7 @@ class StartScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(29),
                     child: TextButton(
                       onPressed: () {
-                        Navigator.of(context).pushNamed(MainScreen.routename);
+                        Navigator.of(context).pushNamed(ImageScreen.routeName);
                       },
                       style: TextButton.styleFrom(
                         padding:
