@@ -28,7 +28,7 @@ class _ImageScreenState extends State<ImageScreen> {
               width: size.width,
               alignment: Alignment.center,
               child: Container(
-                alignment: Alignment.center,
+                alignment: Alignment.bottomCenter,
                 color: Colors.transparent,
                 margin: EdgeInsets.symmetric(vertical: 10),
                 width: size.width * 0.3,
@@ -73,7 +73,7 @@ class _ImageScreenState extends State<ImageScreen> {
               width: size.width,
               alignment: Alignment.center,
               child: Container(
-                alignment: Alignment.center,
+                alignment: Alignment.bottomCenter,
                 color: Colors.transparent,
                 margin: EdgeInsets.symmetric(vertical: 10),
                 width: size.width * 0.3,

@@ -17,6 +17,11 @@ class StartScreen extends StatelessWidget {
             height: size.height,
             width: size.width,
           ),
+          Image.asset(
+            'assets/witaj.png',
+            height: size.height,
+            width: size.width,
+          ),
           Container(
             height: size.height,
             width: size.width,
@@ -24,23 +29,23 @@ class StartScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
+                /* Container(
                   padding: EdgeInsets.all(8),
                   decoration: BoxDecoration(
                     color: Colors.black,
                     borderRadius: BorderRadius.circular(16),
                   ),
                   child: Text(
-                    'Witaj w teście na prawdziwego ósemkowicza',
+                    'Witaj na teście na Ósemkowy social credit',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 36,
                       color: Colors.white,
                     ),
                   ),
-                ),
+                ), */
                 SizedBox(
-                  height: size.height * 0.2,
+                  height: size.height * 0.4,
                 ),
                 Container(
                   color: Colors.transparent,
