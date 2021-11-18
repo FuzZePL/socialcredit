@@ -1,26 +1,33 @@
 import 'package:first_flutter_app/data/answer.dart';
 import 'package:first_flutter_app/data/questions.dart';
+import 'package:first_flutter_app/screens/between_screen.dart';
 import 'package:first_flutter_app/widget/answer_que.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatefulWidget {
   static const String routename = '/start-screen';
-  const MainScreen({Key? key}) : super(key: key);
+  final i;
+  final points;
+  const MainScreen({
+    Key? key,
+    required this.i,
+    required this.points,
+  }) : super(key: key);
 
   @override
   _MainScreenState createState() => _MainScreenState();
 }
 
 class _MainScreenState extends State<MainScreen> {
-  var i = 0;
-  var points = 0;
   List<Answer> qAndA = Question.questions;
   @override
   Widget build(BuildContext context) {
+    var i = widget.i;
+    var points = widget.points;
     final size = MediaQuery.of(context).size;
     final margin = size.height * 0.02;
 
-    if (i < 4) {
+    if (widget.i < 4) {
       return Scaffold(
         backgroundColor: Colors.grey[300],
         body: Stack(
@@ -64,8 +71,7 @@ class _MainScreenState extends State<MainScreen> {
                     SizedBox(
                       height: margin * 2,
                     ),
-                    Image.asset(
-                      'assets/avatar.png',
+                    SizedBox(
                       height: size.height * 0.2,
                       width: size.width * 0.2,
                     ),
@@ -75,8 +81,17 @@ class _MainScreenState extends State<MainScreen> {
                     AnswerQue(
                       onTap: () {
                         points = points + qAndA[i].points[0];
-                        i += 1;
-                        setState(() {});
+
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => BetweenScreen(
+                              points: points,
+                              i: i + 1,
+                              pointsForAnswer: qAndA[i].points[0],
+                            ),
+                          ),
+                        );
                       },
                       answer: qAndA[i].answers[0],
                     ),
@@ -86,8 +101,16 @@ class _MainScreenState extends State<MainScreen> {
                     AnswerQue(
                       onTap: () {
                         points = points + qAndA[i].points[1];
-                        i += 1;
-                        setState(() {});
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => BetweenScreen(
+                              points: points,
+                              i: i + 1,
+                              pointsForAnswer: qAndA[i].points[1],
+                            ),
+                          ),
+                        );
                       },
                       answer: qAndA[i].answers[1],
                     ),
@@ -97,8 +120,17 @@ class _MainScreenState extends State<MainScreen> {
                     AnswerQue(
                       onTap: () {
                         points = points + qAndA[i].points[2];
-                        i += 1;
-                        setState(() {});
+
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => BetweenScreen(
+                              points: points,
+                              i: i + 1,
+                              pointsForAnswer: qAndA[i].points[2],
+                            ),
+                          ),
+                        );
                       },
                       answer: qAndA[i].answers[2],
                     ),
@@ -108,8 +140,17 @@ class _MainScreenState extends State<MainScreen> {
                     AnswerQue(
                       onTap: () {
                         points = points + qAndA[i].points[3];
-                        i += 1;
-                        setState(() {});
+
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => BetweenScreen(
+                              points: points,
+                              i: i + 1,
+                              pointsForAnswer: qAndA[i].points[3],
+                            ),
+                          ),
+                        );
                       },
                       answer: qAndA[i].answers[3],
                     ),

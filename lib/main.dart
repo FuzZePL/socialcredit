@@ -18,7 +18,10 @@ class MyApp extends StatelessWidget {
       home: StartScreen(),
       routes: {
         ImageScreen.routeName: (ctx) => const ImageScreen(),
-        MainScreen.routename: (ctx) => const MainScreen(),
+        MainScreen.routename: (ctx) => MainScreen(
+              i: 0,
+              points: 0,
+            ),
       },
     );
   }
