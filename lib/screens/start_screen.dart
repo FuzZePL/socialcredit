@@ -1,3 +1,4 @@
+import 'package:first_flutter_app/screens/main_screen.dart';
 import 'package:flutter/material.dart';
 
 class StartScreen extends StatelessWidget {
@@ -21,11 +22,18 @@ class StartScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  'Witaj w teście na prawdziwego ósemkowicza',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 36,
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Text(
+                    'Witaj w teście na prawdziwego ósemkowicza',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 36,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
                 SizedBox(
@@ -38,7 +46,9 @@ class StartScreen extends StatelessWidget {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(29),
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).pushNamed(MainScreen.routename);
+                      },
                       style: TextButton.styleFrom(
                         padding:
                             EdgeInsets.symmetric(vertical: 18, horizontal: 40),

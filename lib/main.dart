@@ -15,6 +15,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: StartScreen(),
+      routes: {
+        MainScreen.routename: (ctx) => const MainScreen(),
+      },
     );
   }
 }

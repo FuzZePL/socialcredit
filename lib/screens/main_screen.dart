@@ -4,6 +4,7 @@ import 'package:first_flutter_app/widget/answer_que.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatefulWidget {
+  static const String routename = '/start-screen';
   const MainScreen({Key? key}) : super(key: key);
 
   @override
